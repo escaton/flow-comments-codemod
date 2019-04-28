@@ -1,0 +1,23 @@
+{
+  "name": "flow2comments",
+  "version": "0.0.1",
+  "description": "Convert flowtype syntax to valid js",
+  "main": "src/flow2comments.ts",
+  "author": "Egor Blinov <eho31@yandex.ru>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --bail",
+    "build": "tsc --outDir dist src/flow2comments.ts"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/jscodeshift": "^0.6.0",
+    "@types/node": "^11.13.8",
+    "jest": "^24.7.1",
+    "jscodeshift": "^0.6.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}
