@@ -1,8 +1,8 @@
 import * as jscodeshift from 'jscodeshift';
 
-function fromSource(source) {
+function fromSource(source: string) {
     const lines = source.split('\n');
-    return (loc) => {
+    return (loc: jscodeshift.Node['loc']) => {
         const resLines = lines.slice(loc.start.line - 1, loc.end.line);
         resLines[resLines.length - 1] = resLines[resLines.length - 1].slice(0, loc.end.column);
         resLines[0] = resLines[0].slice(loc.start.column);
@@ -10,14 +10,12 @@ function fromSource(source) {
     }
 }
 
-function stripFlowFromComment(node) {
+function stripFlowFromComment(node: jscodeshift.Node) {
     if (node.comments) {
         node.comments = node.comments.map(comment => {
             comment.value = comment.value.replace(/\s?@flow/i, '');
             return comment;
         }).filter(comment => comment.value.trim().length)
-    } else if (node.commentBlock) {
-
     }
 }
 
