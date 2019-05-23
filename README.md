@@ -1,6 +1,9 @@
 ## flow-comments-codemod [![Build Status](https://travis-ci.org/escaton/flow-comments-codemod.svg)](https://travis-ci.org/escaton/flow-comments-codemod)
 
-This codemod converts [Flow](https://flow.org) syntax into valid JS, but keep it [valid Flow](https://flow.org/en/docs/types/comments/)
+This codemod converts [Flow](https://flow.org) syntax into valid JS, but keep it [valid Flow](https://flow.org/en/docs/types/comments/).
+
+Such transformation may be useful with gradual migration from Flow to Typescript.
+
 ```js
 type Arg = { data: number }
 function fn(arg: Arg): void {
@@ -15,16 +18,18 @@ function fn(arg/*: Arg*/)/*: void*/ {
 ```
 More examples [here](https://github.com/escaton/flow-comments-codemod/tree/master/src/__testfixtures__)
 
-Such transformation may be useful with gradual migration from Flow to Typescript.
+Compared to [@babel/plugin-transform-flow-comments](https://babeljs.io/docs/en/babel-plugin-transform-flow-comments) this transformation better handles comment line breaks and doesn't touch unchanged code.
 
-In some cases the result may look a bit messy:
+### Known issues
+
+In some cases the result may look a bit messy, 
+so i recommend to apply [Prettier](http://prettier.io/) after transformation:
 ```js
 var f = (d: any): number);
 ```
 ```js
 var f = (((d/*: any*/)/*: number*/));
 ```
-so i recommend to apply [Prettier](http://prettier.io/) after transformation.
 
 ### Setup & Run
 
