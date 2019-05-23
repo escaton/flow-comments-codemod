@@ -22,14 +22,14 @@ Compared to [@babel/plugin-transform-flow-comments](https://babeljs.io/docs/en/b
 
 ### Known issues
 
-In some cases the result may look a bit messy, 
-so i recommend to apply [Prettier](http://prettier.io/) after transformation:
+In some cases the result may look a bit messy:
 ```js
 var f = (d: any): number);
 ```
 ```js
 var f = (((d/*: any*/)/*: number*/));
 ```
+so i recommend to apply [Prettier](http://prettier.io/) after transformation.
 
 ### Setup & Run
 
