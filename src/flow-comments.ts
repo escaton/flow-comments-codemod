@@ -96,6 +96,10 @@ function flow2comments(file: jscodeshift.FileInfo, api: jscodeshift.API): string
         .replaceWith(flowBlockComment);
 
     root
+        .find(j.TypeParameterInstantiation)
+        .replaceWith(flowBlockComment);
+
+    root
         .find(j.OpaqueType)
         .replaceWith(flowBlockComment);
 

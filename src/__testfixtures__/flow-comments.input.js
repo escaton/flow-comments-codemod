@@ -98,6 +98,13 @@ class C4<T> implements TestInterface {
     interfaceMethod(value: string): void {};
 }
 
+// class extends with generic
+class C5 extends Component<Props> {
+    render() {
+        return null;
+    }
+}
+
 // simple type cast
 var e = (d: number);
 
