@@ -1,13 +1,13 @@
 {
-  "name": "flow2comments",
+  "name": "flow-comments-codemod",
   "version": "0.0.1",
   "description": "Convert flowtype syntax to valid js",
-  "main": "src/flow2comments.ts",
+  "main": "src/flow-comments.ts",
   "author": "Egor Blinov <eho31@yandex.ru>",
   "license": "MIT",
   "scripts": {
     "test": "jest --bail",
-    "build": "tsc --outDir dist src/flow2comments.ts"
+    "debug": "jscodeshift -d -p -t ./src/flow-comments.ts src/__testfixtures__/flow-comments.input.js"
   },
   "dependencies": {},
   "devDependencies": {
