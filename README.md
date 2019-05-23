@@ -9,7 +9,7 @@ function fn(arg: Arg): void {
 ```
 ```js
 /*:: type Arg = { data: number } */
-function fn(arg*/: Arg*/)/*: void*/ {
+function fn(arg/*: Arg*/)/*: void*/ {
     console.log(arg)
 }
 ```
