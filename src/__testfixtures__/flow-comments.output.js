@@ -49,7 +49,7 @@ var b/*: {
 var c/*: UnionAlias*/ = 1;
 
 // typeof variable type
-var d/*: typeof JSDefaultImport*/ = {}
+var d/*: typeof JSDefaultImport2*/ = {}
 
 // function arg and return types
 function fn1(a/*: boolean*/, b/*: number*/)/*: void*/ {}
@@ -94,7 +94,7 @@ class C2/*:: <T>*/ {}
 // class implements interface
 class C3 /*:: implements TestInterface*/
 {
-    interfaceMethod1(value/*: string*/)/*: void*/ {}
+    interfaceMethod(value/*: string*/)/*: void*/ {}
     interfaceMethod2(value/*: string*/) {}
 }
 
@@ -105,7 +105,7 @@ class C4/*:: <T>*/ /*:: implements TestInterface*/
 }
 
 // simple type cast
-var h = ((g/*: number*/));
+var e = ((d/*: number*/));
 
 // nested type cast
-var i = (((g/*: any*/)/*: number*/));
+var f = (((d/*: any*/)/*: number*/));
