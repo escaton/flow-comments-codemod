@@ -16,7 +16,14 @@ function fn(arg*/: Arg*/)/*: void*/ {
 
 Such transformation may be useful with gradual migration from Flow to Typescript.
 
-In some cases the result may look a bit messy: `var f = (d: any): number);` => `var f = (((d/*: any*/)/*: number*/));`, so i recommend to apply [Prettier](http://prettier.io/) after transformation.
+In some cases the result may look a bit messy:
+```js
+var f = (d: any): number);
+```
+```js
+var f = (((d/*: any*/)/*: number*/));
+```
+so i recommend to apply [Prettier](http://prettier.io/) after transformation.
 
 ### Setup & Run
 
