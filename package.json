@@ -1,7 +1,7 @@
 {
   "name": "flow-comments-codemod",
   "version": "0.0.1",
-  "description": "Convert flowtype syntax to valid js",
+  "description": "Convert flowtype syntax to valid JS",
   "main": "src/flow-comments.ts",
   "author": "Egor Blinov <eho31@yandex.ru>",
   "license": "MIT",
