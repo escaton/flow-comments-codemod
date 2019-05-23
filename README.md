@@ -13,6 +13,7 @@ function fn(arg*/: Arg*/)/*: void*/ {
     console.log(arg)
 }
 ```
+More examples [here](https://github.com/escaton/flow-comments-codemod/tree/master/src/__testfixtures__)
 
 Such transformation may be useful with gradual migration from Flow to Typescript.
 
