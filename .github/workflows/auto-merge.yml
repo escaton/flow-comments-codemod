@@ -3,6 +3,7 @@ name: auto-merge
 on:
   pull_request:
     tags: dependencies
+  workflow_dispatch:
 
 jobs:
   auto-merge:
