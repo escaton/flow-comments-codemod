@@ -1,16 +1,13 @@
-name: auto-merge
-
+name: automerge
 on:
   pull_request:
     tags: dependencies
-  workflow_dispatch:
-
+  status: {}
 jobs:
-  auto-merge:
+  automerge:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
-        with:
-          target: minor
-          github-token: ${{ github.token }}
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.13.0"
+        env:
+          GITHUB_TOKEN: "${{ github.token }}"
