@@ -115,4 +115,4 @@ class C5 extends Component/*:: <Props>*/ {
 var e = ((d/*: number*/));
 
 // nested type cast
-var f = (((d/*: any*/)/*: number*/));
+var f = (((d/*: any*/)/*: number*/))
